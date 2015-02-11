@@ -1,3 +1,4 @@
+setwd("D:\\backup\\knowledge base\\Data Science\\4 - Exploratory Data Analysis\\Project")
 
 #Download the data if it isn't downloaded yet
 txt <- "household_power_consumption.txt"
@@ -27,7 +28,7 @@ df$DateTime <- paste(strptime(df$Date, "%d/%m/%Y"), df$Time)
 df$DateTime <- as.POSIXct(df$DateTime) 
 
 #Plot
-par(mfrow=c(2,2), mar=c(2,5,1,1), oma=c(1,0,0,0))
+par(mfrow=c(2,2), mar=c(4,5,1,1), oma=c(1,0,0,0))
 
 #Upper Left
 plot(df$Global_active_power ~ df$DateTime, type="l", ylab="Global Active Power", xlab="")
