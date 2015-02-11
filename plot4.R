@@ -19,7 +19,7 @@ memGB <- mem / (2^30)
 
 #Load only data from the dates 2007-02-01 and 2007-02-02
 library(sqldf)
-df <- read.csv.sql(txt, colClasses=c("dmy"), sep=";", sql="SELECT * FROM file WHERE Date='1/2/2007' OR Date='2/2/2007'")
+df <- read.csv.sql(txt, sep=";", sql="SELECT * FROM file WHERE Date='1/2/2007' OR Date='2/2/2007'")
 df[df=="?"] <- NA #Replace '?'
 
 #Create a continuous DataTime column
